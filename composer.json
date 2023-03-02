@@ -33,10 +33,5 @@
         "psr-4": {
             "Doctrine\\Common\\": "lib/Doctrine/Common"
         }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "2.7.x-dev"
-        }
     }
 }
