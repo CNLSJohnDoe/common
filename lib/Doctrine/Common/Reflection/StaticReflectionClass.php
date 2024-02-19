@@ -106,7 +106,7 @@ class StaticReflectionClass extends ReflectionClass
     /**
      * {@inheritDoc}
      */
-    public function getConstants()
+    public function getConstants(?  $filter = \null)
     {
         throw new ReflectionException('Method not implemented');
     }

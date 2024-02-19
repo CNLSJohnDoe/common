@@ -98,7 +98,7 @@ class MappingDriverChain implements MappingDriver
     {
         /* @var $driver MappingDriver */
         foreach ($this->drivers as $namespace => $driver) {
-            if (strpos($className, $namespace) === 0) {
+            if (strpos($className, (string) $namespace) === 0) {
                 $driver->loadMetadataForClass($className, $metadata);
                 return;
             }
@@ -129,7 +129,7 @@ class MappingDriverChain implements MappingDriver
             }
 
             foreach ($driverClasses[$oid] AS $className) {
-                if (strpos($className, $namespace) === 0) {
+                if (strpos($className, (string) $namespace) === 0) {
                     $classNames[$className] = true;
                 }
             }
@@ -151,7 +151,7 @@ class MappingDriverChain implements MappingDriver
     {
         /* @var $driver MappingDriver */
         foreach ($this->drivers AS $namespace => $driver) {
-            if (strpos($className, $namespace) === 0) {
+            if (strpos($className, (string) $namespace) === 0) {
                 return $driver->isTransient($className);
             }
         }

@@ -65,7 +65,7 @@ class Psr0FindFile implements ClassFinderInterface
         $classPath .= str_replace('_', DIRECTORY_SEPARATOR, $className) . '.php';
 
         foreach ($this->prefixes as $prefix => $dirs) {
-            if (0 === strpos($class, $prefix)) {
+            if (0 === strpos($class, (string) $prefix)) {
                 foreach ($dirs as $dir) {
                     if (is_file($dir . DIRECTORY_SEPARATOR . $classPath)) {
                         return $dir . DIRECTORY_SEPARATOR . $classPath;
