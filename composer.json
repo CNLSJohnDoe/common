@@ -12,12 +12,6 @@
         {"name": "Jonathan Wage", "email": "jonwage@gmail.com"},
         {"name": "Johannes Schmitt", "email": "schmittjoh@gmail.com"}
     ],
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/CNLSJohnDoe/annotations.git"
-        }
-    ],
     "require": {
         "php": ">=8.2",
         "doctrine/inflector": "1.*",
